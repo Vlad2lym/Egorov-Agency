@@ -1,0 +1,43 @@
+.countdown {
+    display: flex;
+    margin-top: 32px;
+    animation: moveCountdown 2.4s ease-in;
+}
+
+.countdown__colon {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    color: #162C4E;
+    margin: 0 5px;
+}
+
+@media (max-width: 1100px) {
+    .countdown__colon {
+        font-size: 36px;
+    }
+}
+
+@keyframes moveCountdown {
+    0% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    66% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    73% {
+        position: relative;
+        top: -15px;
+        opacity: 0.5;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}

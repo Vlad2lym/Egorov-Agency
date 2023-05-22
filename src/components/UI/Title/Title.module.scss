@@ -1,0 +1,16 @@
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 104%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #162C4E;
+    opacity: 0.39;
+}
+
+@media (max-width: 1100px) {
+    .title {
+        font-size: 36px;
+    }
+}

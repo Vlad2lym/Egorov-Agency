@@ -1,0 +1,194 @@
+@import '../../index.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content__logo {
+    margin-top: 60px;
+    cursor: pointer;
+    animation: move 0.8s ease-in;
+}
+
+.content__title {
+    margin-top: 93px;
+    animation: moveTitle 1.6s ease-in;
+}
+
+.content__subtitle {
+    @extend %standardP;
+    margin-top: 8px;
+    width: 423px;
+    animation: moveTitle 1.6s ease-in;
+}
+
+.content__label {
+    @extend %standardP;
+    margin: 72px 0 12px;
+    animation: moveLinkBtn 3.5s ease-in;
+}
+
+.content__link {
+    text-decoration: none;
+}
+
+.content__linkBtn {
+    background: #1D4169;
+    border-radius: 40px;
+    width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    @extend %standardP;
+    color: #fff;
+    cursor: pointer;
+    animation: moveLinkBtn 3.5s ease-in;
+}
+
+.backPictureLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: movePicture 3.5s ease-in;
+}
+
+.backPictureRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: movePicture 3.5s ease-in;
+}
+
+@media (max-width: 1100px) {
+    .backPictureLeft {
+        top: -125px;
+        left: -55px;
+    }
+}
+
+@media (max-width: 550px) {
+    .backPictureLeft {
+        top: -31px;
+        left: -16px;
+        width: 200px;
+    }
+
+    .backPictureRight {
+        top: -18px;
+        right: -15px;
+        width: 200px;
+    }
+
+    .content__title {
+        margin-top: 66px;
+    }
+
+    .content__subtitle {
+        width: 286px;
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .content__label {
+        font-size: 16px;
+        margin: 40px 0 15px;
+    }
+}
+
+@keyframes move {
+    0% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    50% {
+        position: relative;
+        top: -15px;
+        opacity: 0.5;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveTitle {
+    0% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    50% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    75% {
+        position: relative;
+        top: -15px;
+        opacity: 0.2;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 0.39;
+    }
+}
+
+@keyframes movePicture {
+    0% {
+        position: absolute;
+        top: -30px;
+        opacity: 0;
+    }
+    60% {
+        position: absolute;
+        top: -30px;
+        opacity: 0;
+    }
+    80% {
+        position: absolute;
+        top: -15px;
+        opacity: 0.5;
+    }
+    100% {
+        position: absolute;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes moveLinkBtn {
+    0% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    60% {
+        position: relative;
+        top: -30px;
+        opacity: 0;
+    }
+    80% {
+        position: relative;
+        top: -15px;
+        opacity: 0.5;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
